@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66750198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: -1, z: 1.75}
+  m_LocalPosition: {x: 1, y: -1, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -300,7 +300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c8573db8e30e916479a705831bd5040c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8573db8e30e916479a705831bd5040c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,6 +573,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.34545305, y: 1.4224896, z: 6.216007}
   m_Center: {x: 0, y: -0.037159324, z: -0.41183197}
+--- !u!114 &230959988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230959980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25dfe2ea8ae9d4a41902d11aa0ad3e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletInMagazine: 20
+  stockPos: {x: 1, y: -1.1, z: 2.7}
+  zoomPos: {x: 0.3, y: -1, z: 3.5}
+  shotPower: 1
+  shotMultipler: 0.1
 --- !u!1 &294968108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2cf10fa706c7a4d42b5927d8e730f4e2, type: 3}
@@ -596,6 +613,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3345178, y: 1.4343929, z: 2.8454785}
   m_Center: {x: 0, y: 0.120087415, z: 0.21871847}
+--- !u!114 &294968116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294968108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f4f0c7be78229479b35024d5937fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletInMagazine: 20
+  stockPos: {x: 1, y: -1.1, z: 2.2}
+  zoomPos: {x: 0.3, y: -1.1, z: 3.2}
+  shotPower: 1
+  shotMultipler: 0.1
 --- !u!1001 &303691823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -657,6 +691,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffb3f5f9531da764c906b0baf3285c62, type: 3}
+--- !u!1001 &318421984
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1053376634}
+    m_Modifications:
+    - target: {fileID: 1782395880954752, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_Name
+      value: MuzzleFlash
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782395880954752, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977485751071522, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199226664080650972, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199899835747133198, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
 --- !u!1 &554130162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,6 +1694,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.26056075, y: 0.971557, z: 1.6699742}
   m_Center: {x: 0, y: 0.050266325, z: -0.10166764}
+--- !u!114 &1053376641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053376633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c688e4cad9f3f324b8370061d18f850d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletInMagazine: 20
+  stockPos: {x: 1, y: -1, z: 2}
+  zoomPos: {x: 0, y: -0.7, z: 2.5}
+  shotPower: 1.7
+  shotMultipler: 1.3
+--- !u!95 &1053376644
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053376633}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a68449dad758a694aa11e77f9c6de1bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1081816097 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ffb3f5f9531da764c906b0baf3285c62, type: 3}
@@ -2076,9 +2216,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48714ae5305a5544b9707669580d8f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPower: 1
   bulletInMagazine: 30
-  zoomPos: {x: 0, y: -1, z: 1.75}
+  stockPos: {x: 1, y: -1.1, z: 2.2}
+  zoomPos: {x: 0.3, y: -1.1, z: 3.2}
+  shotPower: 1
+  shotMultipler: 0.1
 --- !u!65 &1645906191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2113,7 +2255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f9696fb6017be144a307b6586855ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f9696fb6017be144a307b6586855ac0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2277,6 +2419,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33039495, y: 1.1573753, z: 6.7861705}
   m_Center: {x: 0.021642119, y: -0.025194913, z: 0.0052063465}
+--- !u!114 &1982215465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982215457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae46e09f3f1ac142a5d148050abd871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletInMagazine: 20
+  stockPos: {x: 0.8, y: -0.9, z: 2.7}
+  zoomPos: {x: 0.3, y: -0.7, z: 3.7}
+  shotPower: 1
+  shotMultipler: 0.1
 --- !u!1 &2013037209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +3023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90ba6530d9bfda47abb4610956b2f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raydistance: 5
+  raydistance: 4.5
   weaponText: {fileID: 87204216}
   weapon: {fileID: 66750199}
   playerCamera: {fileID: 4459864849899209171}
@@ -2877,11 +3036,11 @@ MonoBehaviour:
   crosshair: 1
   crosshairImage: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
   crosshairColor: {r: 1, g: 1, b: 1, a: 1}
+  shootKey: 323
   enableZoom: 1
-  holdToZoom: 1
   zoomKey: 324
   zoomFOV: 30
-  zoomStepTime: 10
+  zoomStepTime: 70
   playerCanMove: 1
   walkSpeed: 10
   maxVelocityChange: 10
