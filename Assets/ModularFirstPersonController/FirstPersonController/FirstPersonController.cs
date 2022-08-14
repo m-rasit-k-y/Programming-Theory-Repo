@@ -206,6 +206,6 @@ public class FirstPersonController : MonoBehaviour
         obj.GetComponent<BoxCollider>().isTrigger = true;
         obj.SetParent(weapon);
         obj.localRotation = Quaternion.identity;
-        obj.localPosition = new Vector3(0, 0, 0.7f);
+        obj.localPosition = new Vector3(0, 0, 0.5f);
     }
 }
