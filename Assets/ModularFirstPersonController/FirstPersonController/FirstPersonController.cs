@@ -60,7 +60,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        weaponPos = weapon.transform.position;
+        weaponPos = weapon.position;
 
         if (lockCursor)
         {
@@ -122,13 +122,13 @@ public class FirstPersonController : MonoBehaviour
                     isZoomed = true;
                     var ZoomPos = new Vector3(0, -1, 1.75f);
 
-                    weapon.transform.localPosition = Vector3.Lerp(weapon.transform.localPosition, ZoomPos, zoomStepTime * Time.deltaTime);
+                    weapon.localPosition = Vector3.Lerp(weapon.localPosition, ZoomPos, zoomStepTime * Time.deltaTime);
                 }
                 else if(Input.GetKeyUp(zoomKey))
                 {
                     isZoomed = false;
 
-                    weapon.transform.position = Vector3.Lerp(weapon.position, weaponPos, zoomStepTime * Time.deltaTime);
+                    weapon.localPosition = Vector3.Lerp(weapon.localPosition, weaponPos, zoomStepTime * Time.deltaTime);
                 }
             }
 
