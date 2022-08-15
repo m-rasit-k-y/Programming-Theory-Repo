@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Weapon
+  - 12
+  - 10
+  - 9
+  - 8
+  - 7
+  - 2
   layers:
   - Default
   - TransparentFX

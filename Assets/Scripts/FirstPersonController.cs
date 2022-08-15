@@ -76,7 +76,8 @@ public class FirstPersonController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-        if(crosshair)
+
+        if (crosshair)
         {
             crosshairObject.sprite = crosshairImage;
             crosshairObject.color = crosshairColor;
@@ -161,16 +162,17 @@ public class FirstPersonController : MonoBehaviour
         {
             weaponText.gameObject.SetActive(false);
         }
-
-        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * raydistance,Color.red);
     }
 
     private void WeaponChange(Transform obj)
     {
+        _anim.applyRootMotion = true;
+
         _stockPos = obj.GetComponent<Weapon>().stockPos;
         _shotTime = obj.GetComponent<Weapon>().shotMultipler;
         _shotPower = obj.GetComponent<Weapon>().shotPower;
         _anim = obj.GetComponent<Animator>();
+        _anim.applyRootMotion = false;
         var mainweapon = weapon.GetChild(0).transform;
 
         mainweapon.GetComponent<BoxCollider>().isTrigger = false;
@@ -214,7 +216,6 @@ public class FirstPersonController : MonoBehaviour
         if (Input.GetKeyDown(shootKey))
         {
             _anim.SetBool("Shot", true);
-
         }
         else if (Input.GetKeyUp(shootKey))
         {

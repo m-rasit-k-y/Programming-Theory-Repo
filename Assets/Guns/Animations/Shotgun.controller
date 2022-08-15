@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e98197b972f157c46b4dce3f70266976, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8d5eb1e95d3536a45847b3e6c3703c40, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -58,7 +58,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pistol
+  m_Name: Shotgun
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Shot
@@ -132,7 +132,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b172027ee587b9a4bb21f4a952f7bdd6, type: 2}
+  m_Motion: {fileID: 7400000, guid: 092a65d37b0e35849a45c2f6deaf192e, type: 2}
   m_Tag: 
   m_SpeedParameter: ShotMultipler
   m_MirrorParameter: 
