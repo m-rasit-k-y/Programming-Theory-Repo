@@ -588,6 +588,7 @@ MonoBehaviour:
   bulletInMagazine: 20
   stockPos: {x: 1, y: -1.1, z: 2.7}
   zoomPos: {x: 0.3, y: -1, z: 3.5}
+  shotPos: {x: 0, y: 0, z: 0}
   shotPower: 1
   shotMultipler: 0.1
 --- !u!1 &294968108 stripped
@@ -628,6 +629,7 @@ MonoBehaviour:
   bulletInMagazine: 20
   stockPos: {x: 1, y: -1.1, z: 2.2}
   zoomPos: {x: 0.3, y: -1.1, z: 3.2}
+  shotPos: {x: 0, y: 0, z: 0}
   shotPower: 1
   shotMultipler: 0.1
 --- !u!1001 &303691823
@@ -1709,9 +1711,10 @@ MonoBehaviour:
   bulletInMagazine: 20
   stockPos: {x: 1, y: -1, z: 2}
   zoomPos: {x: 0, y: -0.7, z: 2.5}
+  shotPos: {x: 1, y: -1, z: 1.5}
   shotPower: 1.7
   shotMultipler: 1.3
---- !u!95 &1053376644
+--- !u!95 &1053376647
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -2219,6 +2222,7 @@ MonoBehaviour:
   bulletInMagazine: 30
   stockPos: {x: 1, y: -1.1, z: 2.2}
   zoomPos: {x: 0.3, y: -1.1, z: 3.2}
+  shotPos: {x: 0, y: 0, z: 0}
   shotPower: 1
   shotMultipler: 0.1
 --- !u!65 &1645906191
@@ -2434,6 +2438,7 @@ MonoBehaviour:
   bulletInMagazine: 20
   stockPos: {x: 0.8, y: -0.9, z: 2.7}
   zoomPos: {x: 0.3, y: -0.7, z: 3.7}
+  shotPos: {x: 0, y: 0, z: 0}
   shotPower: 1
   shotMultipler: 0.1
 --- !u!1 &2013037209

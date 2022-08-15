@@ -36,7 +36,11 @@ public class FirstPersonController : MonoBehaviour
 
     [Header("Shooting")]
     public KeyCode shootKey = KeyCode.Mouse0;
-
+    private float _shotTime;
+    private float _shotPower;
+    private Animator _anim;
+    private Vector3 _stockPos;
+    private Vector3 _shotPos;
 
     [Header("Zoom Settings")]
     public bool enableZoom = true;
@@ -61,6 +65,11 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+        _stockPos = weapon.GetComponentInChildren<Weapon>().stockPos;
+        _shotTime = weapon.GetComponentInChildren<Weapon>().shotMultipler;
+        _shotPower = weapon.GetComponentInChildren<Weapon>().shotPower;
+        _anim = weapon.GetComponentInChildren<Animator>();
+
 
         if (lockCursor)
         {
@@ -158,8 +167,12 @@ public class FirstPersonController : MonoBehaviour
 
     private void WeaponChange(Transform obj)
     {
+        _stockPos = obj.GetComponent<Weapon>().stockPos;
+        _shotTime = obj.GetComponent<Weapon>().shotMultipler;
+        _shotPower = obj.GetComponent<Weapon>().shotPower;
+        _anim = obj.GetComponent<Animator>();
         var mainweapon = weapon.GetChild(0).transform;
-        var anim = weapon.GetComponentInChildren<Animator>();
+
         mainweapon.GetComponent<BoxCollider>().isTrigger = false;
         mainweapon.SetParent(obj.parent);
         mainweapon.SetPositionAndRotation(obj.position, obj.rotation);
@@ -177,7 +190,6 @@ public class FirstPersonController : MonoBehaviour
         if (enableZoom)
         {
             var _zoomPos = obj.GetComponent<Weapon>().zoomPos;
-            var _stockPos = obj.GetComponent<Weapon>().stockPos;
 
             if (Input.GetKeyDown(zoomKey))
             {
@@ -195,20 +207,18 @@ public class FirstPersonController : MonoBehaviour
 
     private void Shooting()
     {
-        var anim = weapon.GetComponentInChildren<Animator>();
-        var shotTime = weapon.GetComponentInChildren<Weapon>().shotMultipler;
 
+        _anim.SetFloat("ShotMultipler", _shotTime);
 
-        anim.SetFloat("ShotMultipler", shotTime);
 
         if (Input.GetKeyDown(shootKey))
         {
-            anim.SetBool("Shot", true);
+            _anim.SetBool("Shot", true);
 
         }
         else if (Input.GetKeyUp(shootKey))
         {
-            anim.SetBool("Shot", false);
+            _anim.SetBool("Shot", false);
 
         }
     }

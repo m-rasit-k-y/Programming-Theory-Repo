@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
 
     public Vector3 stockPos;
     public Vector3 zoomPos;
+    public Vector3 shotPos;
 
     public float shotPower = 1f;
     public float shotMultipler = 0.5f;
